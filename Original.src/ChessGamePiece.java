@@ -103,6 +103,8 @@ public abstract class ChessGamePiece {
      */
     protected abstract ArrayList<String> calculatePossibleMoves(ChessGameBoard board);
 
+
+
     /**
      * Calculates and returns moves in the south direction relative to this
      * piece.

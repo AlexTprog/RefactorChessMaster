@@ -35,6 +35,8 @@ public class Queen
      */
     @Override
     protected ArrayList<String> calculatePossibleMoves(ChessGameBoard board) {
+        ArrayList<String> allMoves = new ArrayList<String>();
+
         ArrayList<String> northEastMoves = calculateNorthEastMoves(board, 8);
         ArrayList<String> northWestMoves = calculateNorthWestMoves(board, 8);
         ArrayList<String> southEastMoves = calculateSouthEastMoves(board, 8);
@@ -45,16 +47,17 @@ public class Queen
         ArrayList<String> eastMoves = calculateEastMoves(board, 8);
         ArrayList<String> westMoves = calculateWestMoves(board, 8);
 
-        ArrayList<String> allMoves = new ArrayList<String>();
-
         allMoves.addAll(northEastMoves);
         allMoves.addAll(northWestMoves);
+        allMoves.addAll(northMoves);
+
         allMoves.addAll(southWestMoves);
         allMoves.addAll(southEastMoves);
-        allMoves.addAll(northMoves);
         allMoves.addAll(southMoves);
+
         allMoves.addAll(westMoves);
         allMoves.addAll(eastMoves);
+
         return allMoves;
     }
 
